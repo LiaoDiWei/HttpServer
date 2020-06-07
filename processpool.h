@@ -320,7 +320,7 @@ void processpool<T>::run_child()
     users = NULL;
     close(pipefd);
     //close(m_listenfd); //我们将这句话注释掉，
-    //以提醒读者：应该由m_listenfd的创建者来关闭这个文件描述符（见后文）
+    //提醒：应该由m_listenfd的创建者来关闭这个文件描述符
     //即所谓的“对象（比如一个文件描述符，又或者一段堆内存）由哪个函数创建，就应该由哪个函数销毁”
     close(m_epollfd);
 }
@@ -446,7 +446,7 @@ void processpool<T>::run_parent()
             }
         }
     }
-    //close(m_listenfd);/*由创建者关闭这个文件描述符（见后文）*/
+    //close(m_listenfd);/*由创建者关闭这个文件描述符*/
     close(m_epollfd);
 }
 
