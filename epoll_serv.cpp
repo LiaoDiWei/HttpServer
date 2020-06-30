@@ -1,6 +1,6 @@
 /*
 *   By LiaoDiWei
-*   2020.05.30
+*   2020.5.30
 */
 
 #include <cstring>
